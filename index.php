@@ -1,5 +1,5 @@
 <?PHP
-header('Location: login.php');
-exit;
+header('Location: pages/landing.php ');
+
 ?>
 
