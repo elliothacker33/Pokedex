@@ -8,15 +8,25 @@
 </head>
 <body>
 	<header>
+    <section class= "head">
     <img src="../images/Poké_Ball_icon.svg.png" alt="Pokeball">
         <h1>Pokedex</h1>
-    </header>
+    </section>
+    <section class="search">
+        <input type="text">
+    </section>
+</header>
     <main>
-        <section class= "buttons">
-
+        <section class="head">
+        <h2>Pikachu</h2> <!-- Pokemon name -->
         </section>
-        <section class= "pokemons">
-            
+        <section class="pokemon">
+            <div class=pokemon-image>
+
+            </div>
+            <div class=pokemon-stats>
+
+            </div>
         </section>
     </main>
     
