@@ -15,7 +15,7 @@ width: 100vw;
   padding: 0;
 }
 *{
-    background-color:#F4CA07;  
+    
 }
 body{
     display: grid;
@@ -72,7 +72,7 @@ main>.head{
 }
 .head>h2{
     text-align: center;
-    font-size: 4rem;
+    font-size: 4em;
     color:white;
 }
 .pokemon{
@@ -80,7 +80,13 @@ main>.head{
     grid-template-columns: 1fr 1fr;
 }
 .pokemon-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:purple solid 2px;
+}
+.pokemon-image>img{
+    width: 25vw;
 }
 .pokemon-stats{
     border:black solid 2px;
