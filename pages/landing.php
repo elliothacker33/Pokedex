@@ -51,7 +51,7 @@ if ($data !== null) {
     </section>
     <section class="pokemon">
         <div class="pokemon-image">
-            <img src="<?php echo $imageUrl; ?>" alt="<?php echo $name; ?>">
+            <img src="../images/pokemon/<?php echo $name?>.png" alt="<?php echo $name; ?>">
         </div>
         <div class="pokemon-stats">
             <!-- Display other Pokémon stats here if needed -->

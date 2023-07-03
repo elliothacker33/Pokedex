@@ -6,5 +6,5 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("hello");
         document.body.style.backgroundColor = "orange";
     }
-    else document.body.style.backgroundColor = "yellow";
+    else document.body.style.backgroundImage="linear-gradient(to right top, #ffad15, #ff9c18, #ff8b1f, #ff7928, #ff6630)";
 });
