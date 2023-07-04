@@ -92,6 +92,10 @@ h2{
     font-size: 3rem;
     color: rgba(66, 59, 59, 0.661);
 }
+.pokemon-name>button{
+    position: relative;
+    left:50%;
+}
 .pokemon-image{
     display: flex;
     justify-content: center;

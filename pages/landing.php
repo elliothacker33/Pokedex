@@ -25,10 +25,16 @@ $maincolor = $data['color']['name'];
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../javascript/radarChart.js" defer></script>
     <script src="../javascript/clearInput.js" defer></script>
+    <script src="../javascript/audio.js" defer></script>
     <title>Landing Page</title>
 </head>
 <body>
 <input type="hidden" class="color" value="<?php echo htmlspecialchars($maincolor); ?>"/>
+<audio id="myAudio">
+  <source src="../audio/Humilau City Gym Remastered  Pokémon Black 2  White 2.mp3" type="audio/mpeg">
+</audio>
+<button id="playButton">Play</button>
+
 <header>
     <section class= "head">
         <h1>#<?php echo $pokeid?></h1>
@@ -47,6 +53,7 @@ $maincolor = $data['color']['name'];
         </div>
         <div class="pokemon-name">
         <h2><?php echo ucfirst($pokemonName); ?></h2> <!-- Pokémon name -->
+        
         </div>
     </section>
     
