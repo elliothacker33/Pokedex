@@ -2,24 +2,13 @@
 $pokemonName = isset($_GET['name']) ? $_GET['name'] : 'pikachu';
 
 // URL for the PokeAPI endpoint
-$url = 'https://pokeapi.co/api/v2/pokemon/' . $pokemonName;
+$url = 'https://pokeapi.co/api/v2/pokemon-species/' . strtolower($pokemonName);
 // Fetch the data from the API
 $response = file_get_contents($url);
 // Parse the JSON response
 $data = json_decode($response, true);
 
-
-// Check if the response is valid
-if ($data !== null) {
-    // Extract the image and name from the response
-    $imageUrl = $data['sprites']['front_default'];
-    $name = $data['name'];
-} else {
-    // Default values if the API call fails
-    $imageUrl = '';
-    $name = 'Pokémon not found';
-}
-
+$maincolor = $data['color']['name'];
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +21,7 @@ if ($data !== null) {
     <title>Landing Page</title>
 </head>
 <body>
-<input type="hidden" class="color" value="<?php echo htmlspecialchars($name); ?>"/>
+<input type="hidden" class="color" value="<?php echo htmlspecialchars($maincolor); ?>"/>
 <header>
     <section class= "head">
         <img src="../images/Poké_Ball_icon.svg.png" alt="Pokeball">
@@ -46,16 +35,16 @@ if ($data !== null) {
     </section>
 </header>
 <main>
-    <section class="head">
-        <h2><?php echo ucfirst($name); ?></h2> <!-- Pokémon name -->
-    </section>
     <section class="pokemon">
+        <div class="pokemon-name">
+        <h2><?php echo ucfirst($pokemonName); ?></h2> <!-- Pokémon name -->
+        </div>
         <div class="pokemon-image">
-            <img src="../images/pokemon/<?php echo $name?>.png" alt="<?php echo $name; ?>">
+        <img src="../images/pokemon/<?php echo strtolower($pokemonName) ?>.png" alt="<?php echo $pokemonName; ?>">
         </div>
-        <div class="pokemon-stats">
+    </section>
+    <section class="pokemon-stats">
             <!-- Display other Pokémon stats here if needed -->
-        </div>
     </section>
 </main>
 </body>

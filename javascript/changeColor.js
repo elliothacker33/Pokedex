@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const pokemonNameInput = document.querySelector('.color');
-    const pokemonName = pokemonNameInput.value.toLowerCase();
-    console.log(pokemonName)
-    if (pokemonName == 'charizard') {
-        console.log("hello");
-        document.body.style.backgroundColor = "orange";
-    }
-    else document.body.style.backgroundImage="linear-gradient(to right top, #ffad15, #ff9c18, #ff8b1f, #ff7928, #ff6630)";
+    const pokemonColorInput = document.querySelector('.color');
+    const pokemonColor = pokemonColorInput.value.toLowerCase();
+    const pokemonImage = document.querySelector('.pokemon-image > img');
+    console.log(pokemonColor);
+    // Set the main color as the drop shadow color for the Pokémon image
+    pokemonImage.style.filter = `drop-shadow(10px 10px 80px ${pokemonColor})`;
 });
