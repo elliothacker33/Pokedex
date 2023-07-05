@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="../style/landing.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../javascript/clearInput.js" defer></script>
     <script src="../javascript/ajaxBuild.js" type="module" defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <title>Pokemon</title>
 </head>
 <body>
