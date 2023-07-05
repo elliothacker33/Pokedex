@@ -1,64 +1,66 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const header=document.querySelector('header');
-    const input=document.querySelector('input[name="name"]');
+export function colorf() {
+    const header = document.querySelector('header');
+    const input = document.querySelector('input[name="name"]');
     const pokemonColorInput = document.querySelector('.color');
     const pokemonColor = pokemonColorInput.value.toLowerCase();
     const pokemonImage = document.querySelector('.pokemon-image > img');
-    console.log(pokemonColor);
-    if (pokemonColor === "green") {
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#8DC7AC';
-        input.style.border='solid 4px #88B989 ';
+    const pokemonContainer = document.querySelector('.pokemon');
+  
+    switch (pokemonColor) {
+      case 'green':
         header.style.backgroundColor = '#8DC7AC';
-        pokemonImage.style.filter = "drop-shadow(10px 10px 100px #8FC38C)";
-    }
-    if(pokemonColor==="gray"){
+        input.style.border = 'solid 4px #88B989';
+        pokemonContainer.style.backgroundColor = '#8DC7AC';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'gray':
         header.style.backgroundColor = '#983543';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#983543';
-    }
-    if(pokemonColor==='yellow'){
+        pokemonContainer.style.backgroundColor = '#983543';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #C5CCDD)';
+        break;
+      case 'yellow':
         header.style.backgroundColor = '#F4D77C';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#F4D77C';
-    }
-    if(pokemonColor==='black'){
+        pokemonContainer.style.backgroundColor = '#F4D77C';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 20px #F4D77C)';
+        break;
+      case 'black':
         header.style.backgroundColor = '#3F3E3E';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#3F3E3E';
-    }
-    if(pokemonColor==='brown'){
+        pokemonContainer.style.backgroundColor = '#3F3E3E';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'brown':
         header.style.backgroundColor = '#836953';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#836953';
-    }
-    if(pokemonColor==='blue'){
+        pokemonContainer.style.backgroundColor = '#836953';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'blue':
         header.style.backgroundColor = '#406389';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#406389';
-    }
-    if(pokemonColor==='red'){
+        pokemonContainer.style.backgroundColor = '#406389';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'red':
         header.style.backgroundColor = '#E84C02';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#E84C02';
-    }
-    if(pokemonColor==='purple'){
+        pokemonContainer.style.backgroundColor = '#E84C02';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'purple':
         header.style.backgroundColor = '#9E9ABA';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#9E9ABA';
-    }
-    if(pokemonColor==='pink'){
+        pokemonContainer.style.backgroundColor = '#9E9ABA';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'pink':
         header.style.backgroundColor = '#F4CFE2';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#F4CFE2';
+        pokemonContainer.style.backgroundColor = '#F4CFE2';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      case 'white':
+        header.style.backgroundColor = '#DBDBDC';
+        pokemonContainer.style.backgroundColor = '#DBDBDC';
+        pokemonImage.style.filter = 'drop-shadow(10px 10px 100px #8FC38C)';
+        break;
+      default:
+        // Handle the case when the color doesn't match any of the above cases
+        break;
     }
-    if(pokemonColor==='white'){
-        header.style.backgroundColor = '#DBDBDC ';
-        var poke = document.querySelector('.pokemon');
-        poke.style.backgroundColor = '#DBDBDC ';
-    }
-    
-    
-    
-
-});
+  }
+  

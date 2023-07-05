@@ -21,12 +21,12 @@ body{
 }
 header{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
    
 }
 .head{
-    
-    padding:1rem;
+    justify-content: baseline;
+    padding-left:1rem;
     display:flex;
     align-items: center;
    
@@ -59,12 +59,20 @@ input::placeholder{
 input:focus{
     outline: none;
 }
-h1{
-    position:absolute;
+.head>h1{
     font-weight: 400;
     color:white;
+    font-size: 4em;                             
+}
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: end;
+}
+.main>h1{
     font-size: 4em;
-    padding-left: 10px;                                  
+    font-weight: 400;
+    color:white;
 }
 
 
@@ -105,5 +113,6 @@ h2{
 .pokemon-image>img{
     width: 15vw;
 }
+
 
 
