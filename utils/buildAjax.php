@@ -7,6 +7,9 @@ $pokemon = BuildPokemon($name);
 $name=$pokemon->getName();
 $id = $pokemon->getId();
 $color = $pokemon->getMainColor();
-$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color);
+if(is_null($color))
+    $color="green";
+$types=$pokemon->getTypes();
+$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color,"types"=>$types);
 echo json_encode($response);
 ?>

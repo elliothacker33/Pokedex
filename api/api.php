@@ -28,6 +28,14 @@
         $data=$this->getPokemonSpecies($name);
         return $data['color']['name'];
     }
+    public function getPokemonTypes($name){
+        $data=$this->getPokemon($name);
+        $types=[];
+        foreach ($data['types'] as $typeData) {
+            $types[] = $typeData['type']['name'];
+        }
+        return $types;        
+    }
    }
    
    

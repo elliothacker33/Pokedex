@@ -1,5 +1,6 @@
 import { colorf } from './changeColor.js';
 import { clearInput } from './clearInput.js';
+import { colorTypesf  } from './colorTypes.js'
 
 window.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -28,9 +29,12 @@ function fetchPokemonData(pokemonName) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
       if (response.success) {
+        console.log(response);
         var id = response.id;
         var name = response.name;
         var color = response.color;
+        var types= response.types;
+        console.log(color);
 
         // Update the page elements with the Pokémon data
         document.querySelector('.color').value = color;
@@ -38,8 +42,23 @@ function fetchPokemonData(pokemonName) {
         document.querySelector('.pokemon-image img').setAttribute('src', '../images/pokemon/' + name.toLowerCase() + '.png');
         document.querySelector('.pokemon-image img').setAttribute('alt', name);
         document.querySelector('.pokemon-name h2').textContent = name.charAt(0).toUpperCase() + name.slice(1);
+        
+      var containerTypes = document.querySelector('.pokemon-types');
+
+      // Clear the container
+    containerTypes.textContent = '';
+
+// Iterate through the types array
+    for (let i = 0; i < types.length; i++) {
+      var type = types[i];
+      var img = document.createElement('img');
+      img.src =  '../images/pokemon-types/' + type.toLowerCase() + '.png'
+      img.alt = type;
+      containerTypes.appendChild(img);
+    }
         colorf();
         clearInput();
+        colorTypesf();
 
         // Update the URL with the current Pokémon name
         const urlParams = new URLSearchParams();
