@@ -16,7 +16,8 @@ const button = document.querySelector('form button');
 button.addEventListener('click', function(event) {
   event.preventDefault();
   const pokemonName = document.querySelector('form input').value;
-  fetchPokemonData(pokemonName);
+  if(pokemonName!=='')
+    fetchPokemonData(pokemonName);
 });
 
 function fetchPokemonData(pokemonName) {

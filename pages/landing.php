@@ -31,12 +31,7 @@
         </div>
         <div class="pokemon-name">
         <h2></h2> <!-- Pokémon name -->
-        
         </div>
-    </section>
-    
-</div>
-
     </section>
 </main>
 </body>
