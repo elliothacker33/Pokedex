@@ -1,12 +1,9 @@
 export function colorTypesf() {
     var container = document.querySelector('.pokemon-types');
-
     var images = container.getElementsByTagName('img');
-
     for (var i = 0; i < images.length; i++) {
       var img = images[i];
       var type = img.alt;
-  
       switch (type) {
         case 'normal':
           img.style.filter = 'drop-shadow(2px 2px 20px #9099A1)';

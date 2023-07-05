@@ -4,6 +4,7 @@ export function colorf() {
     const pokemonColorInput = document.querySelector('.color');
     const pokemonColor = pokemonColorInput.value.toLowerCase();
     const pokemonContainer = document.querySelector('.pokemon');
+    
   
     switch (pokemonColor) {
       case 'green':

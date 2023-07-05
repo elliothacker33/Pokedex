@@ -10,6 +10,11 @@ $color = $pokemon->getMainColor();
 if(is_null($color))
     $color="green";
 $types=$pokemon->getTypes();
-$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color,"types"=>$types);
+$description=strtolower($pokemon->getDescription());
+$height=$pokemon->getHeight();
+$weight=$pokemon->getWeight();
+$genders=$pokemon->getGenderRatios();
+$stats=$pokemon->getStats();
+$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color,"types"=>$types,"description"=>$description,"weight"=>$weight,"height"=>$height,"genders"=>$genders,"stats"=>$stats);
 echo json_encode($response);
 ?>

@@ -34,7 +34,69 @@ function fetchPokemonData(pokemonName) {
         var name = response.name;
         var color = response.color;
         var types= response.types;
-        console.log(color);
+        var weight=response.weight+" kg";
+        var height=response.height+" m";
+        var desc=response.description;
+        var male=response.genders['Male']+" %";
+        var female=response.genders['Female']+" %";
+        var stats=response.stats;
+        var c1color;
+        var c2color;
+        switch (color) {
+          case 'green':
+            c1color = "#63BB5B";
+            c2color = "#B4CA86";
+            break;
+          case 'pink':
+            c1color = "hotpink";
+            c2color = "pink";
+            break;
+          case 'black':
+            c1color="black";
+            c2color="grey";
+            break;
+          case 'white':
+            c1color="whitesmoke";
+            c2color="lightgrey";
+            break;
+          case 'brown':
+            c1color="brown";
+            c2color="burlywood";
+            break;
+          case 'yellow':
+              c1color="#F3D33B";
+              c2color="#F7EBC6";
+            break;
+          case 'red':
+              c1color="red";
+              c2color="lightcoral";
+              break;
+          case 'purple':
+              c1color="purple";
+              c2color="#DAD9AE";
+          case 'gray':
+              c1color="#983543";
+              c2color="grey";
+          case 'blue':
+            c1color="#406389";
+            c2color="#95CEDC";
+            break;
+          default:
+            break;
+        }
+        
+        desc = desc.replace(/\f/g, ' ').replace(/\n/g, ' ');
+        let sentences = desc.split('.');
+sentences = sentences.map(sentence => {
+  sentence = sentence.trim();
+  if (sentence.length > 0) {
+    sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+  }
+  return sentence;
+});
+
+desc = sentences.join('. ');
+        console.log(desc);
 
         // Update the page elements with the Pokémon data
         document.querySelector('.color').value = color;
@@ -42,6 +104,37 @@ function fetchPokemonData(pokemonName) {
         document.querySelector('.pokemon-image img').setAttribute('src', '../images/pokemon/' + name.toLowerCase() + '.png');
         document.querySelector('.pokemon-image img').setAttribute('alt', name);
         document.querySelector('.pokemon-name h2').textContent = name.charAt(0).toUpperCase() + name.slice(1);
+        document.querySelector('#pokemon-desc>p').textContent=desc.charAt(0).toUpperCase()+ desc.slice(1);
+        document.querySelector('.stats1>div:nth-child(1)>p').textContent=female;
+        document.querySelector('.stats1>div:nth-child(2)>p').textContent=male;
+        document.querySelector('.stats1>div:nth-child(3)>p').textContent=weight;
+        document.querySelector('.stats1>div:nth-child(4)>p').textContent=height;
+        
+        document.querySelector('.stats2 > div:nth-child(1) > div').setAttribute('data-value', stats['hp']);
+        let percentage=(stats['hp']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(1) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        document.querySelector('.stats2 > div:nth-child(2) > div').setAttribute('data-value1', stats['attack']);
+        percentage=(stats['attack']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(2) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        document.querySelector('.stats2 > div:nth-child(3) > div').setAttribute('data-value2', stats['defense']);
+        percentage=(stats['defense']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(3) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        document.querySelector('.stats2 > div:nth-child(4) > div').setAttribute('data-value3', stats['speed']);
+        percentage=(stats['speed']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(4) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        document.querySelector('.stats2 > div:nth-child(5) > div').setAttribute('data-value4', stats['special attack']);
+        percentage=(stats['special attack']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(5) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        document.querySelector('.stats2 > div:nth-child(6) > div').setAttribute('data-value5', stats['special defense']);
+        percentage=(stats['special defense']/255)*100;
+        document.querySelector('.stats2 > div:nth-child(6) > div').style.background = `radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(${c1color} ${percentage}%, ${c2color} 0)`;
+        
         
       var containerTypes = document.querySelector('.pokemon-types');
 

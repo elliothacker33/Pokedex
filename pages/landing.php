@@ -34,12 +34,69 @@
             <div id="pokemon-header">
                 <div class="pokemon-types">
                 </div>
+
                 <div class="name"><h2></h2></div>
                 <div class="favorite-wrapper">
                     <img src="../images/Captura de ecrã de 2023-07-05 16-24-27.png" alt="star">
                 </div>
+        </div>
             <div id="pokemon-main">
+                <div id="pokemon-desc">
+                    <p></p>
+                </div>
+                <div id="pokemon-stats">
+                    <div class="stats1">
+                        <div>
+                            <img src="../images/male.png" alt="male">
+                            <p></p>
+                        </div>
+                        <div>
+                        <img src="../images/female.png" alt="male">
+                        <p></p>
+                        </div>
+                        <div>
+                            <img src="../images/weight.png" alt="weight">
+                            <p></p>
+                        </div>
+                        <div>
+                            <img src="../images/height.png" alt="height">
+                            <p></p>
+                        </div>
 
+                    </div>
+                    <div class="stats2">
+                        <div>
+                        <div data-value='0' class="progress-bar">
+                        </div>
+                        <p>HP</p>
+                        </div>
+                        <div>
+                        <div data-value1='0' class="progress-bar">
+                        </div>
+                        <p>Attack</p>
+                        </div>
+                        <div>
+                        <div data-value2='0'class="progress-bar">
+                        </div>
+                        <p>Defense</p>
+                        </div>
+                        <div>
+                        <div data-value3='0'class="progress-bar">
+                        </div>
+                        <p>Speed</p>
+                        </div>
+                        <div>
+                        <div data-value4='0' class="progress-bar">
+                        </div>
+                        <p>Special Attack</p>
+                        </div>
+                        <div>
+                        <div data-value5='0' class="progress-bar">
+                        </div>
+                        <p>Special Defense</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
