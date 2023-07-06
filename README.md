@@ -1,2 +1,4 @@
-# Pokemon-database
-A pokemon database where i can find every kind of pokemon and their attacks/powers ...
+# Pokedex
+A pokedex where you can search for your favorite pokemons fast and easy.
+
+## Main features
