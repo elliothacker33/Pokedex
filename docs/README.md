@@ -15,12 +15,12 @@ If you want to try it on dev phase.
 ![Alt text](Pokedex.png "a title")
 ## Technologies used.
   ### Frontend
-  - [x] CSS
-  - [x] HTML
-  - [x] Javascript
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   ### Backend
-  - [x] PHP
-  - [ ] Docker
+   ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+    ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ## User Stories
   1. As an user i want to search for a pokemon and see itś stats.
   2. As an user i want to be able to have a favorite pokemon list.
@@ -29,3 +29,14 @@ If you want to try it on dev phase.
   5. As an user I want to get pop up messages if i update something.
   6. As an user I want to be able to buy pokemons in a marketplace like a game.
   7. As an user I want to feel the most secure possible.
+## Project phases
+- [ ] Main features
+- [ ] Refactoring and Clean Code
+- [ ] Testing
+- [ ] Documentation
+- [ ] Deploy
+## API
+I used PokeApi for this project.
+https://pokeapi.co/
+## Datasets
+The images of Pokemons can be found https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set
