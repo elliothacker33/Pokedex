@@ -1,5 +1,17 @@
 # Pokedex
-A pokedex where you can search for your favorite pokemons fast and easy.
+A pokedex where you can search for your favorite pokemons fast and easy. Now you can have your favorite pokemons on your hand. 
+## Download
+The final version is expected for late 2023.
+If you want to try it on dev phase.
+
+```
+    git clone <repository>
+    go to the folder
+    php -S localhost:9000
+```
+
+
+## Preview of Pokedex
 ![Alt text](Pokedex.png "a title")
 ## Technologies used.
   ### Frontend
