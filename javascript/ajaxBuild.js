@@ -74,9 +74,11 @@ function fetchPokemonData(pokemonName) {
           case 'purple':
               c1color="purple";
               c2color="#DAD9AE";
+              break;
           case 'gray':
               c1color="#983543";
               c2color="grey";
+              break;
           case 'blue':
             c1color="#406389";
             c2color="#95CEDC";

@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 *{
     font-family: 'Poppins', sans-serif;
+    
 }
 html{
     height:100vh;
@@ -25,11 +26,11 @@ body{
     height: 20px;
   }
 ::-webkit-scrollbar-corner {
-    background: #F4D77C;
+    background: grey;
   }
   
   ::-webkit-scrollbar-track {
-    background: #F4D77C;
+    background: rgba(128, 128, 128, 0.611);
   }
   
   ::-webkit-scrollbar-thumb {
