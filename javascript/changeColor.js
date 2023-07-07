@@ -1,6 +1,6 @@
 export function colorf() {
     const header = document.querySelector('header');
-    const input = document.querySelector('input[name="name"]');
+    const input = document.querySelector('form>div');
     const pokemonColorInput = document.querySelector('.color');
     const pokemonColor = pokemonColorInput.value.toLowerCase();
     const pokemonContainer = document.querySelector('.pokemon');

@@ -20,6 +20,13 @@ button.addEventListener('click', function(event) {
   if(pokemonName!=='')
     fetchPokemonData(pokemonName);
 });
+const search=document.querySelector('form>div>div');
+search.addEventListener('click', function(event) {
+  event.preventDefault();
+  const pokemonName = document.querySelector('form input').value;
+  if(pokemonName!=='')
+    fetchPokemonData(pokemonName);
+});
 
 function fetchPokemonData(pokemonName) {
   var xhr = new XMLHttpRequest();
@@ -99,7 +106,6 @@ sentences = sentences.map(sentence => {
 
 desc = sentences.join('. ');
         console.log(desc);
-
         // Update the page elements with the Pokémon data
         document.querySelector('.color').value = color;
         document.querySelector('.head h1').textContent = '#' + id;

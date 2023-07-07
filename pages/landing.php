@@ -20,7 +20,12 @@
     </section>
     <section class="search">
         <form action="landing.php" method="get">
-            <input type="text" name="name" placeholder="Pokemon name">  
+            <div>
+            <input type="text" name="name" placeholder="Pokemon name"> 
+            <div>
+            <img id='find' src="../images/search.png">
+            </div>
+            </div>
             <button type="submit">sub</button>
         </form>
     </section>
@@ -66,7 +71,7 @@
                     </div>
                     <div class="stats2">
                         <div>
-                        <div data-value='0' class="progress-bar">
+                        <div data-value='' class="progress-bar">
                         </div>
                         <p>HP</p>
                         </div>
