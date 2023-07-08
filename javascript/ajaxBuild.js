@@ -109,8 +109,8 @@ desc = sentences.join('. ');
         // Update the page elements with the Pokémon data
         document.querySelector('.color').value = color;
         document.querySelector('.head h1').textContent = '#' + id;
-        document.querySelector('.pokemon-image img').setAttribute('src', '../images/pokemon/' + name.toLowerCase() + '.png');
-        document.querySelector('.pokemon-image img').setAttribute('alt', name);
+        document.querySelector('.pokemon-image>div:nth-of-type(2)>img').setAttribute('src', '../images/pokemon/' + name.toLowerCase() + '.png');
+        document.querySelector('.pokemon-image>div:nth-of-type(2)>img').setAttribute('alt', name);
         document.querySelector('.pokemon-name h2').textContent = name.charAt(0).toUpperCase() + name.slice(1);
         document.querySelector('#pokemon-desc>p').textContent=desc.charAt(0).toUpperCase()+ desc.slice(1);
         document.querySelector('.stats1>div:nth-child(1)>p').textContent=female;

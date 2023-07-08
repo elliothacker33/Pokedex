@@ -32,9 +32,17 @@
 </header>
 <main>
     <section class="pokemon">
-        <div class="pokemon-image">
-        <img src="" alt="">
+    <div class="pokemon-image">
+        <div class="arrows">
+            <img src="../images/arrow.png" alt="">
         </div>
+        <div>
+            <img src="" alt="">
+        </div>
+        <div class="arrows">
+            <img src="../images/arrow.png" alt="">
+        </div>
+    </div>
         <div class="pokemon-name">
             <div id="pokemon-header">
                 <div class="pokemon-types">

@@ -22,10 +22,10 @@ If you want to try it on dev phase.
    ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
     ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ## User Stories
-  1. As an user i want to search for a pokemon and see itś stats.
+  1. As an user i want to search for a pokemon and see itś stats. (Done)
   2. As an user i want to be able to have a favorite pokemon list.
   3. As an user I want to have a settings where i can change my info.
-  4. As an user I want to get easy access to pokemon evolutions.
+  4. As an user I want to get easy access to pokemon evolutions.(In progress)
   5. As an user I want to get pop up messages if i update something.
   6. As an user I want to be able to buy pokemons in a marketplace like a game.
   7. As an user I want to feel the most secure possible.
