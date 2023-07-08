@@ -115,7 +115,6 @@
     
         return $previousEvolution;
     }
-    
     public function getNextEvolution($name) {
         $data = $this->getPokemonSpecies($name);
         $url = $data['evolution_chain']['url'];
@@ -124,7 +123,12 @@
         $chain = $evolutionChainData['chain'];
     
         $nextEvolution = null;
-    
+        if($chain['species']['name']===$name){
+            $nextEvolution=$chain['evolves_to'][0]['species']['name'];
+            if($nextEvolution===null)
+                return $name;
+            else return $nextEvolution;
+        }
         while (isset($chain['evolves_to'][0])) {
             $evolvesTo = $chain['evolves_to'][0];
             $evolutionName = $evolvesTo['species']['name'];
@@ -145,6 +149,9 @@
     
         return $nextEvolution;
     }
+    
+    
+    
     
    }
    
