@@ -15,6 +15,8 @@ $height=$pokemon->getHeight();
 $weight=$pokemon->getWeight();
 $genders=$pokemon->getGenderRatios();
 $stats=$pokemon->getStats();
-$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color,"types"=>$types,"description"=>$description,"weight"=>$weight,"height"=>$height,"genders"=>$genders,"stats"=>$stats);
+$last=$pokemon->getLastEvolution();
+$next=$pokemon->getNextEvolution();
+$response = array("success" => true, "id" => $id, "name" => $name, "color" => $color,"types"=>$types,"description"=>$description,"weight"=>$weight,"height"=>$height,"genders"=>$genders,"stats"=>$stats,"last"=>$last,"next"=>$next);
 echo json_encode($response);
 ?>

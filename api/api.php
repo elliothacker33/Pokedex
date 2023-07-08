@@ -88,6 +88,64 @@
         }
         return $stats;
     }
+    public function getPreviousEvolution($name) {
+        $data = $this->getPokemonSpecies($name);
+        $url = $data['evolution_chain']['url'];
+        $evolutionChainResponse = file_get_contents($url);
+        $evolutionChainData = json_decode($evolutionChainResponse, true);
+        $chain = $evolutionChainData['chain'];
+    
+        $previousEvolution = null;
+    
+        while (isset($chain['evolves_to'][0])) {
+            $evolutionName = $chain['species']['name'];
+            $evolvesTo = $chain['evolves_to'][0];
+    
+            if ($evolvesTo['species']['name'] === $name) {
+                $previousEvolution = $evolutionName;
+                break;
+            }
+    
+            $chain = $evolvesTo;
+        }
+    
+        if ($previousEvolution === null) {
+            $previousEvolution = $name;
+        }
+    
+        return $previousEvolution;
+    }
+    
+    public function getNextEvolution($name) {
+        $data = $this->getPokemonSpecies($name);
+        $url = $data['evolution_chain']['url'];
+        $evolutionChainResponse = file_get_contents($url);
+        $evolutionChainData = json_decode($evolutionChainResponse, true);
+        $chain = $evolutionChainData['chain'];
+    
+        $nextEvolution = null;
+    
+        while (isset($chain['evolves_to'][0])) {
+            $evolvesTo = $chain['evolves_to'][0];
+            $evolutionName = $evolvesTo['species']['name'];
+    
+            if ($evolutionName === $name) {
+                if (isset($evolvesTo['evolves_to'][0])) {
+                    $nextEvolution = $evolvesTo['evolves_to'][0]['species']['name'];
+                }
+                break;
+            }
+    
+            $chain = $evolvesTo;
+        }
+    
+        if ($nextEvolution === null) {
+            $nextEvolution = $name;
+        }
+    
+        return $nextEvolution;
+    }
+    
    }
    
    

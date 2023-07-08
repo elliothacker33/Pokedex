@@ -8,8 +8,10 @@ class Pokemon {
     private $description;  
     private $types;
     private $genderRatios;
+    private $nextEvolution;
+    private $lastEvolution;
     private $stats;
-    public function __construct($name, $id, $mainColor,$types,$description,$weight,$height,$genderRatios,$stats) {
+    public function __construct($name, $id, $mainColor,$types,$description,$weight,$height,$genderRatios,$stats,$nextEvolution,$lastEvolution) {
         $this->name = $name;
         $this->id = $id;
         $this->mainColor = $mainColor;
@@ -19,6 +21,8 @@ class Pokemon {
         $this->height=$height;
         $this->description=$description;
         $this->stats=$stats;
+        $this->lastEvolution=$lastEvolution;
+        $this->nextEvolution=$nextEvolution;
     }
     
     public function getName() {
@@ -49,7 +53,7 @@ class Pokemon {
     }
     
     public function setTypes($types) {
-        $this->name = $types;
+        $this->types = $types;
     }
     public function getDescription() {
         return $this->description;
@@ -85,6 +89,20 @@ class Pokemon {
     
     public function setStats($stats) {
         $this->stats = $stats;
+    }
+    public function getNextEvolution() {
+        return $this->nextEvolution;
+    }
+    
+    public function setNextEvolution($nextEvolution) {
+        $this->nextEvolution = $nextEvolution;
+    }
+    public function getLastEvolution() {
+        return $this->lastEvolution;
+    }
+    
+    public function setLastEvolution($lastEvolution) {
+        $this->lastEvolution = $lastEvolution;
     }
 }
 ?>
